@@ -1,0 +1,6 @@
+
+proj_set<-read.csv("HPC.txt",sep=";")
+proj_set2 <- subset(proj_set,(proj_set$Date=="1/2/2007" | proj_set$Date == "2/2/2007"))
+png(file="Plot1.png")
+hist(as.numeric(as.character((proj_set2[,3]))), col='red' ,xlab='Global Active Power(kilowatts)',cex.lab = 0.8,cex.axis = 0.8 ,main="Global Active Power" )
+dev.off()
